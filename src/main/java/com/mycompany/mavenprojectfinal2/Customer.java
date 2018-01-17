@@ -6,12 +6,16 @@
 package com.mycompany.mavenprojectfinal2;
 
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  *
  * @author Roshli
  */
 
+@Entity
 public class Customer {
     private int tpNumber;
         private String name;

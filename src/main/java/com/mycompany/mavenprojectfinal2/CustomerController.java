@@ -24,14 +24,14 @@ public class CustomerController {
     private Customer customer4 = new Customer();
     
     @RequestMapping(value = "/{tpNo}", method = RequestMethod.GET)
-    @CrossOrigin(origins = "http://loclhost:4200", allowedHeaders="*")
+   // @CrossOrigin(origins = "http://localhost:4200", allowedHeaders="*")
     public Customer viewCustomer(@PathVariable("tpNo") int tpNo)
     {
       customer4 = customerManage.viewCustomer(tpNo);
 
         return customer4;
     }
-    @CrossOrigin(origins = "http://loclhost:4200", allowedHeaders="*")
+   @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType. APPLICATION_JSON_VALUE)
     public void insertCustomer(@RequestBody Customer customer)
     {
