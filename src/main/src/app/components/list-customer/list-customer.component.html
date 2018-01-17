@@ -1,0 +1,33 @@
+
+<div class="container">
+  <form (ngSubmit)="processFormView()">
+    <div class="form-group">
+      <label for="tpNumber">Telephone Number</label>
+      <input type="text" name="tpNumber" id="tpNumber" class="form-control" required [(ngModel)]="module2.tpNumber" name="tpNumber">
+    </div>
+    <button type="submit" class="btn btn-success" (click)="getCustomer()">View Customer</button>
+
+  </form>
+  <div>
+    <br>
+  </div>
+  <table CLASS="table table-striped">
+    <thead>
+    <th>Telephone Number</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Address</th>
+    <th>Email</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{customer.tpNumber}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.age}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.email}}</td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
