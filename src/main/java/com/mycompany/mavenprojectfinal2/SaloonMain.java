@@ -85,7 +85,15 @@ public class SaloonMain {
 //            
 //  
 
-        SpringApplication.run(SaloonMain.class, args);
+     SpringApplication.run(SaloonMain.class, args);
+       /* ManageSaloon c1 = new ManageSaloon();
+        int r = c1.viewCustomers().size();
+        for(int i = 0; i< r; i++)
+        {
+            System.out.println(c1.viewCustomers().get(i).getTpNumber());
+            System.out.println(c1.viewCustomers().get(i));
+        }
+        System.out.println(c1.viewCustomer(112013012));*/
     }
 }
     
